@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Global theme using CSS variables (SB Enterprises style) */
+:root{
+  /* Backgrounds */
+  --bg: 210 60% 98%;
+  --card: 0 0% 100%;
+
+  /* Text */
+  --text: 220 40% 14%;
+  --muted: 220 12% 45%;
+
+  /* Borders */
+  --border: 220 16% 88%;
+
+  /* Brand palette (from SB brand visuals) */
+  --primary: 217 72% 35%;   /* deep blue */
+  --primary2: 196 92% 40%;  /* cyan-blue */
+  --accent: 325 85% 50%;    /* magenta */
+  --accent2: 45 96% 52%;    /* yellow */
+
+  /* Utility */
+  --success: 148 60% 38%;
+  --warning: 28 92% 52%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body{
+  background: hsl(var(--bg));
+  color: hsl(var(--text));
+}
+
+/* nicer focus */
+:focus-visible{
+  outline: 2px solid hsl(var(--primary2));
+  outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
